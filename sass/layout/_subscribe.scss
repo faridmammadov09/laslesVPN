@@ -1,0 +1,15 @@
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 70px;
+  border-radius: 10px;
+  position: relative;
+  top: 120px;
+  background-color: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.09);
+
+  &-left {
+    max-width: 370px;
+  }
+}

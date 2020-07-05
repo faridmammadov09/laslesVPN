@@ -1,0 +1,100 @@
+.testimonials {
+  padding-bottom: 0;
+  &-wrapper {
+  }
+
+  .testimonial {
+    height: 230px;
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid #dddddd;
+    padding: 30px;
+
+    &--active {
+      border-color: $primary-color;
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .customer-photo {
+        margin-right: 20px;
+      }
+
+      .customer-name {
+        font-size: 1.8rem;
+      }
+
+      .customer-location {
+        font-size: 1.4rem;
+      }
+
+      .customer-rating {
+        color: $text-color-2;
+        margin-left: auto;
+
+        &::after {
+          content: url("../images/star.svg");
+          margin-left: 11px;
+        }
+      }
+    }
+
+    &-body {
+      line-height: 30px;
+      color: $text-color-2;
+    }
+  }
+
+  .controls {
+    margin-top: 80px;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .dots {
+      display: flex;
+      .dot {
+        height: 15px;
+        width: 15px;
+        background-color: #ddd;
+        margin-right: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.active {
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    .arrows {
+      display: flex;
+
+      .arrow-left,
+      .arrow-right {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 2px solid $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .arrow-left {
+        margin-right: 20px;
+      }
+
+      .arrow-right {
+        background-color: $primary-color;
+      }
+    }
+  }
+}

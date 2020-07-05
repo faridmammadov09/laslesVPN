@@ -1,4 +1,53 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  color: $text-color-1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $text-color-2;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color-1;
+  display: inline-block;
+  transition: all 200ms ease;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.section-header {
+  margin: 0 auto 60px;
+  max-width: 555px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+// img {
+//   max-width: 100%;
+// }

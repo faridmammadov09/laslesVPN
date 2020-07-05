@@ -1,0 +1,42 @@
+.btn {
+  &-cta {
+    background-color: $primary-color;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba($color: $primary-color, $alpha: 0.35);
+
+    &:hover {
+      box-shadow: 0 20px 40px rgba($color: $text-color-2, $alpha: 0.35);
+      background-color: $text-color-2;
+    }
+  }
+
+  &--small {
+    padding: 13px 45px;
+  }
+
+  &--medium {
+    padding: 12.5px 63px;
+  }
+
+  &--large {
+    padding: 21px 77.5px;
+  }
+
+  &--outlined {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #ffffff;
+    }
+  }
+
+  &--rounded {
+    border-radius: 10px;
+  }
+
+  &--rounded-full {
+    border-radius: 1000px;
+  }
+}

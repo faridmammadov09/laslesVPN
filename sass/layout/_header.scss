@@ -1,0 +1,32 @@
+.header {
+  padding: 20px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav ul {
+    display: flex;
+  }
+
+  .nav .nav-item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  .nav .nav-link {
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &-right {
+    .sign-in-btn {
+      color: $text-color-2;
+      margin-right: 30px;
+      font-weight: 500;
+    }
+  }
+}

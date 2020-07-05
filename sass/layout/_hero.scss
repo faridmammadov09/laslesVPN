@@ -1,0 +1,28 @@
+.hero {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-left {
+    min-width: 555px;
+  }
+
+  .title {
+    font-size: 5rem;
+    font-weight: 500;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .subtitle {
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}

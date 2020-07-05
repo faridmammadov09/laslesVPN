@@ -1,0 +1,27 @@
+.locations {
+  .section-header {
+    .section-title {
+      max-width: 383px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  .sponsored {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  .sponsor {
+    height: 60px;
+    width: 190px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+}
