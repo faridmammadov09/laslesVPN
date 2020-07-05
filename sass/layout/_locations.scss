@@ -6,6 +6,25 @@
       margin-bottom: 20px;
     }
   }
+
+  .locations-map-wrapper svg circle {
+    opacity: 0;
+  }
+
+  .locations-map-wrapper svg circle.circle--active {
+    animation-name: anim;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+
+    @keyframes anim {
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
   .sponsored {
     display: flex;
     align-items: center;
@@ -22,6 +41,11 @@
       width: 100%;
       object-fit: cover;
       object-position: left;
+      transition: 400ms ease;
+
+      &:hover {
+        filter: brightness(10%);
+      }
     }
   }
 }

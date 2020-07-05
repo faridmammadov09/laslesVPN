@@ -711,6 +711,35 @@ section {
   margin-bottom: 20px;
 }
 
+.locations .locations-map-wrapper svg circle {
+  opacity: 0;
+}
+
+.locations .locations-map-wrapper svg circle.circle--active {
+  -webkit-animation-name: anim;
+          animation-name: anim;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes anim {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  100% {
+    opacity: 1;
+  }
+}
+
 .locations .sponsored {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -736,6 +765,13 @@ section {
      object-fit: cover;
   -o-object-position: left;
      object-position: left;
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+}
+
+.locations .sponsor img:hover {
+  -webkit-filter: brightness(10%);
+          filter: brightness(10%);
 }
 
 .testimonials {
@@ -941,8 +977,8 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.19);
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19);
 }
 
 .footer .social-icon img {
