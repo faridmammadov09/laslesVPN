@@ -1,9 +1,27 @@
 .header {
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .nav {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    @include breakpoint(large) {
+      display: block;
+    }
   }
 
   .nav ul {
@@ -23,10 +41,32 @@
   }
 
   &-right {
+    display: none;
     .sign-in-btn {
       color: $text-color-2;
       margin-right: 30px;
       font-weight: 500;
+    }
+
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+
+  .hamburger-menu {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+
+    @include breakpoint(large) {
+      display: none;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
 }

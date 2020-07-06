@@ -2,14 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 70px;
   border-radius: 10px;
   position: relative;
   top: 120px;
   background-color: #fff;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.09);
+  flex-direction: column;
+  padding: 6rem 2rem;
+
+  @include breakpoint(large) {
+    flex-direction: unset;
+    padding: 6rem 7rem;
+  }
 
   &-left {
     max-width: 370px;
+  }
+
+  &-right {
+    width: 100%;
+    margin-top: 20px;
+
+    @include breakpoint(large) {
+      width: unset;
+      margin-top: unset;
+    }
   }
 }

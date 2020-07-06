@@ -4,11 +4,15 @@
   }
 
   .testimonial {
-    height: 230px;
-    width: 400px;
     border-radius: 10px;
     border: 2px solid #dddddd;
-    padding: 30px;
+    padding: 1.5rem;
+    height: 250px;
+
+    @include breakpoint(large) {
+      min-width: 400px;
+      padding: 3rem;
+    }
 
     &--active {
       border-color: $primary-color;
@@ -24,7 +28,11 @@
       }
 
       .customer-name {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+
+        @include breakpoint(large) {
+          font-size: 1.8rem;
+        }
       }
 
       .customer-location {

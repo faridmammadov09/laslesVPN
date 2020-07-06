@@ -1,3 +1,10 @@
 $primary-color: #f53838;
 $text-color-1: #4f5665;
 $text-color-2: #0b132a;
+
+$breakpoints: (
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px,
+);

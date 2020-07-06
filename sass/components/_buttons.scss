@@ -1,5 +1,7 @@
 .btn {
   &-cta {
+    width: 100%;
+    text-align: center;
     background-color: $primary-color;
     color: #ffffff;
     box-shadow: 0 20px 40px rgba($color: $primary-color, $alpha: 0.35);
@@ -8,18 +10,26 @@
       box-shadow: 0 20px 40px rgba($color: $text-color-2, $alpha: 0.35);
       background-color: $text-color-2;
     }
+
+    @include breakpoint(large) {
+      width: unset;
+    }
   }
 
   &--small {
-    padding: 13px 45px;
+    padding: 1.3rem 4.5rem;
   }
 
   &--medium {
-    padding: 12.5px 63px;
+    padding: 1.25rem 6.3rem;
   }
 
   &--large {
-    padding: 21px 77.5px;
+    padding: 2.1rem 3.75rem;
+
+    @include breakpoint(large) {
+      padding: 2.1rem 7.75rem;
+    }
   }
 
   &--outlined {

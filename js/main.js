@@ -3,17 +3,18 @@ const owl = $(".owl-carousel");
 owl.owlCarousel({
   loop: true,
   items: 3,
-  margin: 200,
+  margin: 50,
   dotsContainer: ".dots",
   dotsEach: true,
   responsive: {
     0: {
       items: 1,
     },
-    600: {
+    700: {
       items: 2,
     },
     1000: {
+      margin: 300,
       items: 3,
     },
   },
@@ -34,18 +35,16 @@ $(".dot").click(function () {
   owl.trigger("to.owl.carousel", [$(this).index(), 300]);
 });
 
-// const locationsMap = document.getElementById("locations-map");
-// const circles = locationsMap.querySelectorAll("circle");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const smallNav = document.querySelector(".small-nav");
+const smallNavItems = document.querySelectorAll(".small-nav ul li");
 
-// for (circle of circles) {
-//   circle.style.opacity = "0";
-// }
+hamburgerMenu.addEventListener("click", function () {
+  smallNav.classList.toggle("small-nav--active");
+});
 
-$(window).on("scroll", function () {
-  scroll_pos = $(window).scrollTop() + $(window).height();
-  element_pos =
-    $("#locations-map").offset().top + $("#locations-map").height() - 100;
-  if (scroll_pos > element_pos) {
-    $("#locations-map circle").addClass("circle--active");
-  }
+smallNavItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    smallNav.classList.toggle("small-nav--active");
+  });
 });

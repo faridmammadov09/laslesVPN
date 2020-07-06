@@ -3,6 +3,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: unset;
+    }
+  }
+
+  &-left {
+    margin-bottom: 20px;
+
+    @include breakpoint(large) {
+      margin-bottom: unset;
+    }
+    img {
+      width: 100%;
+    }
   }
 
   &-right {

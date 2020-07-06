@@ -1,28 +1,49 @@
 .hero {
+  padding-top: 100px;
+
   .container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap-reverse;
+
+    @include breakpoint(large) {
+      flex-wrap: nowrap;
+    }
   }
 
   .hero-left {
-    min-width: 555px;
+    width: 100%;
+
+    @include breakpoint(large) {
+      max-width: 555px;
+    }
   }
 
-  .title {
-    font-size: 5rem;
+  .section-title {
     font-weight: 500;
+
+    @include breakpoint(large) {
+      font-size: 5rem;
+    }
 
     span {
       font-weight: 700;
     }
   }
 
-  .subtitle {
+  .section-subtitle {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     span {
       font-weight: 500;
+    }
+  }
+
+  .hero-right {
+    width: 100%;
+    img {
+      width: 100%;
     }
   }
 }
