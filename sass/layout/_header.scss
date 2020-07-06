@@ -6,6 +6,10 @@
   width: 100%;
   background-color: #fff;
   z-index: 100;
+
+  @include breakpoint(large) {
+    background-color: #fff;
+  }
   .container {
     display: flex;
     align-items: center;

@@ -66,16 +66,17 @@ section {
 }
 
 .small-nav {
-  padding-right: 20px;
-  padding-top: 150px;
+  padding: 100px 20px 20px;
   position: fixed;
   top: 0;
   right: -100%;
   width: 100%;
   height: 100vh;
-  background-color: $primary-color;
+  background-color: $text-color-2;
   z-index: 100;
   transition: right 400ms ease;
+  display: flex;
+  flex-direction: column;
 
   @include breakpoint(large) {
     display: none;
@@ -86,22 +87,57 @@ section {
   }
 
   ul {
-    height: 60%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    position: relative;
+
+    &:first-child::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      background-color: #fff;
+      height: 1px;
+      width: 20%;
+    }
+
+    & + ul {
+      margin-top: 40px;
+    }
   }
 
   ul li {
-    margin-bottom: 40px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   ul li a {
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: #fff;
+    font-weight: 700;
+    padding: 10px 0;
 
     &:hover {
-      color: $text-color-2;
+      color: $primary-color;
+    }
+  }
+
+  &-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      height: 44px;
+      width: 44px;
+      padding: 10px;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

@@ -21,3 +21,10 @@
 .font-700 {
   font-weight: 700;
 }
+
+.overflow-h {
+  overflow: hidden;
+  @include breakpoint(large) {
+    overflow: unset;
+  }
+}
